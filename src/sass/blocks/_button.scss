@@ -3,6 +3,10 @@
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
     height: 45px;
     padding: 12px 25px;
+    &:hover {
+        transition: 0.6s;
+        box-shadow: 0px 6px 6px rgba(0, 0, 0, 0.16);
+    }
     &_opacity {
         background: none;
         height: 45px;
