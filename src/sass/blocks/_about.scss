@@ -1,10 +1,10 @@
 .about {
-    padding: 120px;
+    padding-top: 120px;
     &__wrapper {
         display: grid;
         grid-template-columns: 400px 670px;
-        grid-template-rows: minmax(245px auto) minmax(255px auto);
-        grid-auto-rows: minmax(245px auto);
+        grid-template-rows: minmax(245px, auto) minmax(255px, auto);
+        grid-auto-rows: minmax(245px, auto);
         column-gap: 70px;
         row-gap: 40px;
     }
@@ -16,28 +16,21 @@
             object-fit: cover;
         }
     }
+    &__descr {
+        padding-top: 6px;
+        .divider {
+            margin: 0;
+        }
+    }
     &__title {
         position: relative;
+        padding: 1px 0 0 12px;
         @include before_circle;
-        margin-left: 12px;
-        margin-top: 6px;
-    }
-    &__subtitle {
-        margin-top: 6px;
-    }
-    &__divider {
-        width: 60px;
-        height: 0px;
-        border: 2px solid $main-color;
-        margin-top: 4px;
     }
     &__text {
-        font-weight: 500;
+        margin-top: 20px;
         font-size: 14px;
         line-height: 21px;
-        color: #000000;
-        max-width: 570px; 
-        margin-top: 20px; 
     }
     &__skills {
         display: grid;
@@ -48,23 +41,20 @@
         &-item {
             display: grid;
             grid-template-columns: 40px 200px;
-            column-gap: 10px;
+            column-gap: 20px;
         }
         &-circle {
             position: relative;
             padding: 15px 0 0 15px;
             @include before_circle;
-            padding: 15px 0 0 3px;
-            &::before {
+            &:before {
                 top: 0;
             }
         }
         &-text {
-            font-weight: 500;
+            margin-top: 6px;
             font-size: 12px;
             line-height: 18px;
-            margin-top: 6px;
         }
     }
-
 }
